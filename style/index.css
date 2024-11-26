@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url('/Porto/Assets/Background.png');
+    margin: 0;
+    padding: 0;
+    padding-top: 0px;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan ke elemen utama */
+.anim {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Navbar */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logoatas {
+    width: 75px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.buton:hover {
+    color: black;
+}
+.smk {
+    color: black;
+    text-decoration: none;
+}
+
+.smk:hover {
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+/* About Section */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    padding-top: 100px;
+    gap: 20px;
+}
+
+.HelloSign{
+    font-size: 45px;
+    padding: 1px;
+    margin: 1px;
+}
+
+.orang {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.org {
+    width: 350px;
+    height: auto;
+    animation: pulse 2s infinite;
+}
+
+.intro-text {
+    max-width: 800px;
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+.about{
+    padding-top: 100px;
+}
+
+/* Skill Section */
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.skilltngh {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+    transition: ease-in-out 0.2s;
+    flex-shrink: 0;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.skilltngh img {
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+}
+
+.skilltngh:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sertifikat Section */
+.sertif {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.Sertifikat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.Sertifikat:hover {
+    transform: scale(1.05);
+}
+
+.Sertifikat img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 250px;
+    text-align: center;
+}
+
+.projek {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-project{
+    margin-bottom: 150px;
+}
+
+
+
+@media (max-width: 559px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        width: 105%;
+        font-size: small;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+        padding: 9px;
+    }
+
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        padding-left: 150px;
+    }
+
+    .logoatas{
+        width: 45px;
+        height: auto;
+    }
+    
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .org {
+        width: 250px;
+    }
+
+    .intro-section, .skill, .sertif, #projects {
+        padding-top: 50px;
+        padding: 15px;
+    }
+
+    .skill {
+        padding-top: 100px;
+    }
+
+    .Sertifikat {
+        width: 100%;
+    }
+
+    .projek{
+        width: 50px;
+        padding-top: 35px;
+    }
+}
+
+.DescriptionText{
+    display: flex;
+    justify-content: center;
+    font-style: oblique;
+    flex-wrap: wrap;
+    font-size: 50px;
+    padding-top: 150px;
+    padding-bottom: 1px;
+}
+
+.column{
+    padding-top: 500px;
+}
+
+footer{
+    background-color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+    padding-top: 200px;
+}
+
+.comment-section{
+    display: flex;
+    flex: wrap;
+    justify-content: justify;
+    width: 50%;
+    padding: 15px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.comment-container{
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+    margin-bottom: 350px;
+}
+
+.comment-style{
+    margin: 0;
+    padding: 0;
+}
+
+.comment-style-img{
+    width: 350px;
+    height: auto;
+    border-radius: 500px;
+}
+
+.comment-fill{
+    margin: 50px;
+}
+
+input[type=text], input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: ease-in-out 0.2s;
+}
+
+.Submit{
+    border-radius: 25px;
+    padding-top: 0px;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    transition: ease-in-out 0.2s;
+}
+
+.Submit:hover{
+    background-color: #d9d9d9;
+    border: solid black 1px;
+}
