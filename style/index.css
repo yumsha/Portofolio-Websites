@@ -6,7 +6,7 @@ html{
 
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url('/Assets/Background.png');
+    background-image: url('Background.png');
     margin: 0;
     padding: 0;
     padding-top: 0px;
